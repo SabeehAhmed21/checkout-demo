@@ -30,6 +30,7 @@ router.get('/api/healthcheck/readiness', (req, res) => {
 
 router.post('/api/invoice', async (req, res) => {
     try {
+        console.log(req.body);
         // you can change the config with your business details
         const data = {
             ...config.invoiceData,
@@ -43,7 +44,7 @@ router.post('/api/invoice', async (req, res) => {
         const invoice = await invoiceController.create(data);
         return res.status(200).send(invoice.data);
     } catch (e) {
-        return res.status(e.response.status).send(e.response.data);
+        return res.status(e.response?.status).send(e.response?.data);
     }
 });
 

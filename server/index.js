@@ -10,6 +10,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const express = require('express');
 const app = express();
+require('dotenv').config();
 
 // setup useful middleware
 app.use(bodyParser.json());

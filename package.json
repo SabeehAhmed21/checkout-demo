@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node server/index.js",
+        "serve": "nodemon server/index.js",
         "prettier": "prettier -w ."
     },
     "repository": {
@@ -25,10 +26,12 @@
     "dependencies": {
         "axios": "^0.21.1",
         "body-parser": "^1.19.0",
+        "dotenv": "^16.4.5",
         "express": "4.17.1"
     },
     "devDependencies": {
         "husky": "^4.3.0",
+        "nodemon": "^3.1.0",
         "prettier": "2.1.2",
         "pretty-quick": "^3.0.2"
     }

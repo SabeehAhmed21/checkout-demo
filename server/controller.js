@@ -22,6 +22,7 @@ class InvoiceController {
     }
 
     async create(data) {
+        console.log('baseurl', process.env.API_GATEWAY_URL);
         const options = {
             method: 'POST',
             headers: this.headers,
